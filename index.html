@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Maafin Aku Ya Teteh 🥺</title>
+<style>
+  body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background: #fff0f5;
+    text-align: center;
+    padding: 30px;
+  }
+  button {
+    font-size: 18px;
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  #yes {
+    background: #ff69b4;
+    color: white;
+  }
+  #no {
+    background: #ccc;
+    position: absolute;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Halo Teteh ☹️</h1>
+<p>Aku ga bermaksud ngatain tth…</p>
+<p>Teteh masih marah ga?</p>
+
+<button id="yes" onclick="maafin()">Maafin 💖</button>
+<button id="no" onmouseover="kabur()">Masih marah 😠</button>
+
+<audio id="yeay">
+  <source src="https://www.myinstants.com/media/sounds/yay.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function kabur() {
+  const btn = document.getElementById("no");
+  btn.style.left = Math.random() * 80 + "%";
+  btn.style.top = Math.random() * 80 + "%";
+}
+
+function maafin() {
+  document.getElementById("yeay").play();
+  document.body.innerHTML = `
+    <h1>YEAY 🎉💖</h1>
+    <p>Makasih ya teteh...</p>
+    <h2>Aku sayang teteh 😘</h2>
+  `;
+}
+</script>
+
+</body>
+</html>
